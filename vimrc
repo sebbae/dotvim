@@ -120,6 +120,11 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
+""""""""""""""""""""""""""""""
+" => Plugins
+""""""""""""""""""""""""""""""
+source ~/.vim/ctrlprc.vim
+source ~/.vim/nerdtreerc.vim
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -129,7 +134,6 @@ set wrap "Wrap lines
 vnoremap <silent> * :call VisualSelection('f')<CR>
 vnoremap <silent> # :call VisualSelection('b')<CR>
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -137,12 +141,18 @@ vnoremap <silent> # :call VisualSelection('b')<CR>
 map j gj
 map k gk
 
-" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-map <space> /
-map <c-space> ?
+" Map Ctrl-f to search
+map <c-f> /
 
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
+
+" Navigate tabs
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+" Reorder tabs
+nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
 
 " Smart way to move between windows
 map <C-j> <C-W>j
