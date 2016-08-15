@@ -205,6 +205,9 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vimgrep searching and cope displaying
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Switch to select mode when holding shift pressed
+behave mswin
+
 " Search for visually selected text in current buffer
 vnoremap <C-F> y/<C-R>"<CR>"
 

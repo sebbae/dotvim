@@ -1,7 +1,7 @@
 " Navigate buffers
 set hidden
-nnoremap <C-Left> :bnext<CR>
-nnoremap <C-Right> :bprev<CR>
+nnoremap <C-Left> :bprev<CR>
+nnoremap <C-Right> :bnext<CR>
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>
