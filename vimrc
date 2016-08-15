@@ -126,6 +126,7 @@ set wrap "Wrap lines
 """"""""""""""""""""""""""""""
 " => Plugins
 """"""""""""""""""""""""""""""
+source ~/.vim/windowslike.vim
 source ~/.vim/buffers.vim
 source ~/.vim/tabs.vim
 source ~/.vim/windows.vim
@@ -205,9 +206,6 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vimgrep searching and cope displaying
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Switch to select mode when holding shift pressed
-behave mswin
-
 " Search for visually selected text in current buffer
 vnoremap <C-F> y/<C-R>"<CR>"
 
