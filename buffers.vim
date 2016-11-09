@@ -4,10 +4,11 @@ nnoremap <C-Left> :bprev<CR>
 nnoremap <C-Right> :bnext<CR>
 
 " Close the current buffer
-map <leader>bd :Bclose<cr>
+map <leader>bd :Bclose<CR>
+map <C-W> :Bclose<CR>
 
 " Close all the buffers
-map <leader>ba :1,1000 bd!<cr>
+map <leader>ba :1,1000 bd!<CR>
 
 " Don't close window, when deleting a buffer
 command! Bclose call <SID>BufcloseCloseIt()

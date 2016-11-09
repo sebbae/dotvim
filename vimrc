@@ -47,23 +47,8 @@ set hid
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
-" Ignore case when searching
-set ignorecase
-
-" When searching try to be smart about cases 
-set smartcase
-
-" Highlight search results
-set hlsearch
-
-" Makes search act like search in modern browsers
-set incsearch
-
 " Don't redraw while executing macros (good performance config)
 set lazyredraw
-
-" For regular expressions turn magic on
-set magic
 
 " Show matching brackets when text indicator is over them
 set showmatch
@@ -126,15 +111,16 @@ set wrap "Wrap lines
 """"""""""""""""""""""""""""""
 " => Plugins
 """"""""""""""""""""""""""""""
-source ~/.vim/windowslike.vim
 source ~/.vim/buffers.vim
 source ~/.vim/tabs.vim
 source ~/.vim/windows.vim
 source ~/.vim/edit.vim
+source ~/.vim/search.vim
 source ~/.vim/saveactions.vim
 source ~/.vim/ctrlprc.vim
 source ~/.vim/nerdtreerc.vim
 source ~/.vim/vim-buftablinerc.vim
+source ~/.vim/diff.vim
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -151,12 +137,6 @@ vnoremap <silent> # :call VisualSelection('b')<CR>
 map j gj
 map k gk
 
-" Map Ctrl-f to search
-map <c-f> /
-
-" Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
-
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
 map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
@@ -165,10 +145,10 @@ map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Return to last edit position when opening files (You want this!)
-autocmd BufReadPost *
-     \ if line("'\"") > 0 && line("'\"") <= line("$") |
-     \   exe "normal! g`\"" |
-     \ endif
+" autocmd BufReadPost *
+"      \ if line("'\"") > 0 && line("'\"") <= line("$") |
+"      \   exe "normal! g`\"" |
+"      \ endif
 " Remember info about open buffers on close
 set viminfo^=%
 
@@ -207,7 +187,7 @@ endif
 " => vimgrep searching and cope displaying
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Search for visually selected text in current buffer
-vnoremap <C-F> y/<C-R>"<CR>"
+"vnoremap <C-F> y/<C-R>"<CR>"
 
 " When you press gv you vimgrep after the selected text
 vnoremap <silent> gv :call VisualSelection('gv')<CR>
