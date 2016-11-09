@@ -4,3 +4,10 @@
 " Insert line in normal mode
 "nmap <S-Enter> O<Esc>j
 "nmap <CR> o<Esc>k
+
+inoremap <A-Down> <Esc>:m .+1<CR>==gi
+nnoremap <A-Up> :m .-2<CR>==
+nnoremap <A-Down> :m .+1<CR>==
+inoremap <A-Up> <Esc>:m .-2<CR>==gi
+vnoremap <A-Up> :m '<-2<CR>gv=gv
+vnoremap <A-Down> :m '>+1<CR>gv=gv

@@ -1,6 +1,6 @@
 " Navigate tabs
-nnoremap <A-Down> :tabprevious<CR>
-nnoremap <A-Up> :tabnext<CR>
+"nnoremap <A-Down> :tabprevious<CR>
+"nnoremap <A-Up> :tabnext<CR>
 
 " Reorder tabs
 nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
