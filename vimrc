@@ -116,6 +116,7 @@ source ~/.vim/tabs.vim
 source ~/.vim/windows.vim
 source ~/.vim/edit.vim
 source ~/.vim/search.vim
+source ~/.vim/quickdiff.vim
 source ~/.vim/saveactions.vim
 source ~/.vim/ctrlprc.vim
 source ~/.vim/nerdtreerc.vim
