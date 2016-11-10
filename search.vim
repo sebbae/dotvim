@@ -17,7 +17,7 @@ set magic
 map <c-f> /
 
 " Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
+map <silent> <CR><CR> :noh<CR>
 
 " Search for selected text.
 " http://vim.wikia.com/wiki/VimTip171
