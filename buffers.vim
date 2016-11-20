@@ -16,6 +16,13 @@ function! <SID>BufcloseCloseIt()
    let l:currentBufNum = bufnr("%")
    let l:alternateBufNum = bufnr("#")
 
+   if buflisted(l:currentBufNum) && getbufvar(l:currentBufNum, "&mod") 
+	   echohl ErrorMsg
+	   echo bufname(l:currentBufNum).' is modified'
+	   echohl None
+	   return 1
+   endif
+
    if buflisted(l:alternateBufNum)
      buffer #
    else
@@ -27,6 +34,6 @@ function! <SID>BufcloseCloseIt()
    endif
 
    if buflisted(l:currentBufNum)
-     execute("bdelete! ".l:currentBufNum)
+     execute("bdelete ".l:currentBufNum)
    endif
 endfunction
