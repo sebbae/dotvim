@@ -82,9 +82,11 @@ source ~/.vim/search.vim
 source ~/.vim/saveactions.vim
 source ~/.vim/ctrlprc.vim
 source ~/.vim/nerdtreerc.vim
-source ~/.vim/vim-buftablinerc.vim
+source ~/.vim/airlinerc.vim
+"source ~/.vim/vim-buftablinerc.vim
 source ~/.vim/diff.vim
 if has("win32unix")
+	source ~/.vim/cygwin.vim
 	source ~/.vim/conemu.vim
 endif
 
@@ -157,13 +159,16 @@ map <leader>pp :setlocal paste!<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vundle setup
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if !empty(glob("bundle/Vundle.vim"))
+if !empty("bundle/Vundle.vim")
 	set rtp+=~/.vim/bundle/Vundle.vim
 	call vundle#begin()
 	Plugin 'VundleVim/Vundle.vim'
 	Plugin 'scrooloose/nerdtree'
 	Plugin 'ctrlpvim/ctrlp.vim'
-	Plugin 'ap/vim-buftabline'
+	Plugin 'vim-airline/vim-airline'
+	Plugin 'vim-airline/vim-airline-themes'
+	Plugin 'tpope/vim-fugitive'
+"	Plugin 'ap/vim-buftabline'
 	call vundle#end()
 else
 	echom "Missing Vundle plugin! Clone repository and run :PluginInstall"
