@@ -111,6 +111,7 @@ set wrap "Wrap lines
 """"""""""""""""""""""""""""""
 " => Plugins
 """"""""""""""""""""""""""""""
+source ~/.vim/display.vim
 source ~/.vim/buffers.vim
 source ~/.vim/tabs.vim
 source ~/.vim/windows.vim
