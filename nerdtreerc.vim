@@ -1,5 +1,3 @@
-set runtimepath^=~/.vim/bundle/nerdtree
-
 map <C-n> :NERDTreeToggle<CR>
 
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
