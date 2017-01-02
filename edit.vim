@@ -1,6 +1,3 @@
-" Break current line in normal mode
-"nnoremap <CR> i<CR><ESC>
-
 " Insert line in normal mode
 "nmap <S-Enter> O<Esc>j
 "nmap <CR> o<Esc>k
@@ -15,3 +12,6 @@ vnoremap <A-Down> :m '>+1<CR>gv=gv
 
 " Cut&Paste
 inoremap <C-V> <Esc>"+gPi
+
+" Exit insert mode with qq
+inoremap qq <Esc>
