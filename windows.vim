@@ -5,5 +5,8 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 map <C-d> <C-W>d
 
-nnoremap <Tab> <C-W>j
-nnoremap <S-Tab> <C-W>k
+nnoremap <F1> <C-W><
+nnoremap <F2> <C-W>>
+nnoremap <F3> <C-W>-
+nnoremap <F4> <C-W>+
+

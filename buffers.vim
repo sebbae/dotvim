@@ -7,7 +7,7 @@ nnoremap <C-Right> :bnext<CR>
 
 " Close the current buffer
 map <leader>bd :Bclose<CR>
-map <C-W> :Bclose<CR>
+map <C-q> :Bclose<CR>
 
 " Close all the buffers
 map <leader>ba :1,1000 bd!<CR>
