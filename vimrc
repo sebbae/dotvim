@@ -253,14 +253,19 @@ map <leader>pp :setlocal paste!<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vundle setup
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'ap/vim-buftabline'
-Plugin 'albertorestifo/github.vim'
-call vundle#end()
+if !empty(glob("bundle/Vundle.vim"))
+	set rtp+=~/.vim/bundle/Vundle.vim
+	call vundle#begin()
+	Plugin 'VundleVim/Vundle.vim'
+	Plugin 'scrooloose/nerdtree'
+	Plugin 'ctrlpvim/ctrlp.vim'
+	Plugin 'ap/vim-buftabline'
+	Plugin 'albertorestifo/github.vim'
+	call vundle#end()
+else
+	echom "Missing Vundle plugin! Clone repository and run :PluginInstall"
+	echom "git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
