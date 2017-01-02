@@ -15,3 +15,11 @@ inoremap <C-V> <Esc>"+gPi
 
 " Exit insert mode with qq
 inoremap qq <Esc>
+
+" Auto-complete parentheses etc.
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
