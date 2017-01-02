@@ -123,6 +123,9 @@ source ~/.vim/ctrlprc.vim
 source ~/.vim/nerdtreerc.vim
 source ~/.vim/vim-buftablinerc.vim
 source ~/.vim/diff.vim
+if has("win32unix")
+	source ~/.vim/conemu.vim
+endif
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
