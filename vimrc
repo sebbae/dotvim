@@ -89,6 +89,7 @@ if has("win32unix")
 	source ~/.vim/cygwin.vim
 	source ~/.vim/conemu.vim
 endif
+source ~/.vim/xsjs.vim
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
