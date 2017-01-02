@@ -1,5 +1,7 @@
-" Navigate buffers
+" A buffer becomes hidden when it is abandoned
 set hidden
+
+" Navigate buffers
 nnoremap <C-Left> :bprev<CR>
 nnoremap <C-Right> :bnext<CR>
 

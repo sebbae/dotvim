@@ -30,9 +30,6 @@ set so=7
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
 
-" A buffer becomes hidden when it is abandoned
-set hid
-
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
