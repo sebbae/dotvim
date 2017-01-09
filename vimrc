@@ -111,7 +111,7 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 "      \   exe "normal! g`\"" |
 "      \ endif
 " Remember info about open buffers on close
-set viminfo^=%
+" set viminfo^=%
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
