@@ -27,18 +27,9 @@ nmap <Space> :
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 
-" Ignore compiled files
-set wildignore=*.o,*~,*.pyc
-
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
-
-" Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
-
-" Use Unix as the standard file type
-set ffs=unix,dos,mac
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -72,6 +63,7 @@ set wrap "Wrap lines
 """"""""""""""""""""""""""""""
 " => Plugins
 """"""""""""""""""""""""""""""
+source ~/.vim/files.vim
 source ~/.vim/display.vim
 source ~/.vim/buffers.vim
 source ~/.vim/tabs.vim
