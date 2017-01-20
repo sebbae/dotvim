@@ -4,10 +4,12 @@ set hidden
 " Navigate buffers
 nnoremap <C-Left> :bprev<CR>
 nnoremap <C-Right> :bnext<CR>
+nnoremap <C-h> :bprev<CR>
+nnoremap <C-l> :bnext<CR>
 
 " Close the current buffer
 map <leader>bd :Bclose<CR>
-map <C-q> :Bclose<CR>
+map <C-d> :Bclose<CR>
 
 " Close all the buffers
 map <leader>ba :1,1000 bd!<CR>
