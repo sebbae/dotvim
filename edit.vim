@@ -13,13 +13,21 @@ vnoremap <A-Down> :m '>+1<CR>gv=gv
 " Cut&Paste
 inoremap <C-V> <Esc>"+gPi
 
-" Exit insert mode with qq
-inoremap qq <Esc>
+" Exit insert mode with jj
+inoremap jj <Esc>
 
 " Auto-complete parentheses etc.
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
+function! ConditionalPairMap(open, close)
+  let line = getline('.')
+  let col = col('.')
+  if col < col('$') || stridx(line, a:close, col + 1) != -1
+    return a:open
+  else
+    return a:open . a:close . repeat("\<left>", len(a:close))
+  endif
+endf
+inoremap <expr> ( ConditionalPairMap('(', ')')
+inoremap <expr> { ConditionalPairMap('{', '}')
+inoremap <expr> [ ConditionalPairMap('[', ']')
+inoremap <expr> " ConditionalPairMap('"', '"')
+inoremap <expr> ' ConditionalPairMap('\'', '\'')
