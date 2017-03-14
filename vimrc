@@ -32,6 +32,7 @@ function! SetPluginOptionsNow()
 	endif
 	if exists(":SyntasticCheck")
 		source ~/.vim/rust.vim
+		source ~/.vim/javascript.vim
 	endif
 endfunction
 
