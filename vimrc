@@ -120,6 +120,9 @@ endif
 source ~/.vim/airlinerc.vim
 source ~/.vim/projecttypes.vim
 source ~/.vim/xsjs.vim
+if !empty(glob("~/.vim/local.vim"))
+	source ~/.vim/local.vim
+endif
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
