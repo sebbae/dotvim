@@ -38,75 +38,15 @@ endfunction
 
 au VimEnter * call SetPluginOptionsNow()
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => General
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Enable filetype plugins
-filetype plugin on
-filetype indent on
-
-" Sets how many lines of history VIM has to remember
-set history=700
-
-" Set to auto read when a file is changed from the outside
-set autoread
-
-let mapleader = ","
-let g:mapleader = ","
-
-nmap <Space> :
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => VIM user interface
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Set 7 lines to the cursor - when moving vertically using j/k
-set so=7
-
-" Configure backspace so it acts as it should act
-set backspace=eol,start,indent
-set whichwrap+=<,>,h,l
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Files, backups and undo
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Turn backup off, since most stuff is in SVN, git et.c anyway...
-set nobackup
-set nowb
-set noswapfile
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Text, tab and indent related
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Use spaces instead of tabs
-"set expandtab
-
-" Be smart when using tabs ;)
-"set smarttab
-
-" 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
-
-" Linebreak on 500 characters
-set lbr
-set tw=500
-
-set ai "Auto indent
-set si "Smart indent
-set wrap "Wrap lines
-
-""""""""""""""""""""""""""""""
-" => Plugins
-""""""""""""""""""""""""""""""
+source ~/.vim/general.vim
 source ~/.vim/files.vim
 source ~/.vim/display.vim
 source ~/.vim/buffers.vim
-source ~/.vim/tabs.vim
 source ~/.vim/windows.vim
 source ~/.vim/edit.vim
+source ~/.vim/move.vim
 source ~/.vim/search.vim
-"source ~/.vim/quickdiff.vim
-source ~/.vim/saveactions.vim
+source ~/.vim/spell.vim
 source ~/.vim/diff.vim
 if has("win32unix")
 	source ~/.vim/cygwin.vim
@@ -118,59 +58,4 @@ source ~/.vim/xsjs.vim
 if !empty(glob("~/.vim/local.vim"))
 	source ~/.vim/local.vim
 endif
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Moving around, tabs, windows and buffers
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Treat long lines as break lines (useful when moving around in them)
-map j gj
-map k gk
-
-" Opens a new tab with the current buffer's path
-" Super useful when editing files in the same directory
-map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
-
-" Switch CWD to the directory of the open buffer
-map <leader>cd :cd %:p:h<cr>:pwd<cr>
-
-" Return to last edit position when opening files (You want this!)
-" autocmd BufReadPost *
-"      \ if line("'\"") > 0 && line("'\"") <= line("$") |
-"      \   exe "normal! g`\"" |
-"      \ endif
-" Remember info about open buffers on close
-" set viminfo^=%
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Editing mappings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Remap VIM 0 to first non-blank character
-map 0 ^
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Spell checking
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Pressing ,ss will toggle and untoggle spell checking
-map <leader>ss :setlocal spell!<cr>
-
-" Shortcuts using <leader>
-map <leader>sn ]s
-map <leader>sp [s
-map <leader>sa zg
-map <leader>s? z=
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Misc
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Remove the Windows ^M - when the encodings gets messed up
-noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
-
-" Quickly open a buffer for scripbble
-map <leader>q :e ~/buffer<cr>
-
-" Toggle paste mode on and off
-map <leader>pp :setlocal paste!<cr>
 

@@ -1,7 +1,3 @@
-" Insert line in normal mode
-"nmap <S-Enter> O<Esc>j
-"nmap <CR> o<Esc>k
-
 " Moving lines/blocks up down
 inoremap <A-Down> <Esc>:m .+1<CR>==gi
 nnoremap <A-Up> :m .-2<CR>==
@@ -15,6 +11,12 @@ inoremap <C-V> <Esc>"+gPi
 
 " Exit insert mode with jj
 inoremap jj <Esc>
+
+" Quickly open a buffer for scripbble
+map <leader>q :e ~/buffer<cr>
+
+" Toggle paste mode on and off
+map <leader>pp :setlocal paste!<cr>
 
 " Auto-complete parentheses etc.
 function! ConditionalPairMap(open, close)
