@@ -48,6 +48,7 @@ source ~/.vim/move.vim
 source ~/.vim/search.vim
 source ~/.vim/spell.vim
 source ~/.vim/diff.vim
+source ~/.vim/quickfix.vim
 if has("win32unix")
 	source ~/.vim/cygwin.vim
 	source ~/.vim/conemu.vim
