@@ -33,7 +33,8 @@ set autoindent
 set smartindent
 set wrap
 
-func! DeleteTrailingWS()
+command! DeleteTrailingWS call <SID>DeleteTrailingWS()
+func! <SID>DeleteTrailingWS()
   exe "normal mz"
   %s/\s\+$//ge
   exe "normal `z"
