@@ -7,7 +7,7 @@ vnoremap <A-Up> :m '<-2<CR>gv=gv
 vnoremap <A-Down> :m '>+1<CR>gv=gv
 
 " Cut&Paste
-inoremap <C-V> <Esc>"+gPi
+" inoremap <C-V> <Esc>"+gPi
 
 " Exit insert mode with jj
 inoremap jj <Esc>
