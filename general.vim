@@ -22,7 +22,7 @@ nmap <Space> :
 
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
-set whichwrap+=<,>,h,l
+set whichwrap+=<,>
 
 " 1 tab == 4 spaces
 set shiftwidth=4
