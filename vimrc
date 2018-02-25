@@ -16,6 +16,7 @@ if !empty("bundle/Vundle.vim")
 	Plugin 'vim-airline/vim-airline-themes'
 	Plugin 'tpope/vim-fugitive'
 	Plugin 'tpope/vim-surround'
+	Plugin 'tpope/vim-commentary'
 	Plugin 'rust-lang/rust.vim'
 	Plugin 'fatih/vim-go'
 	call vundle#end()
