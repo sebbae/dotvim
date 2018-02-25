@@ -15,9 +15,9 @@ if !empty("bundle/Vundle.vim")
 	Plugin 'vim-airline/vim-airline'
 	Plugin 'vim-airline/vim-airline-themes'
 	Plugin 'tpope/vim-fugitive'
+	Plugin 'tpope/vim-surround'
 	Plugin 'rust-lang/rust.vim'
 	Plugin 'fatih/vim-go'
-"	Plugin 'ap/vim-buftabline'
 	call vundle#end()
 else
 	echom "Missing Vundle plugin! Clone repository and run :PluginInstall"
