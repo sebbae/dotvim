@@ -7,3 +7,6 @@ map k gk
 
 " Remap VIM 0 to first non-blank character
 map 0 ^
+
+nnoremap ü {
+nnoremap ä }
