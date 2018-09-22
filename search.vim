@@ -53,10 +53,16 @@ map <silent> <CR><CR> :noh<CR>
 
 " Standard search key bindings
 nnoremap <C-F> /
-nnoremap <C-G> :vimgrep //jg **/* <left><left><left><left><left><left><left>
+nnoremap <C-G> :noautocmd vimgrep //jg **/*<left><left><left><left><left><left><left><left>
 
 " Search using visual selection
 vnoremap <C-F> :<C-U>call <SID>VSetSearch('/')<CR>:%s/<C-R>///gc
-vnoremap <C-G> :<C-U>call <SID>VSetSearch('/')<CR>:vimgrep /<C-R>//jg **/*
+vnoremap <C-G> :<C-U>call <SID>VSetSearch('/')<CR>:noautocmd vimgrep /<C-R>//jg **/*
 vnoremap <silent> * :<C-U>call <SID>VSetSearch('/')<CR>/<C-R>/<CR>
 vnoremap <silent> # :<C-U>call <SID>VSetSearch('?')<CR>?<C-R>/<CR>
+
+" Switch to ripgrep if available
+if executable('rg')
+	set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
+	nnoremap <C-G> :grep<space>
+endif
