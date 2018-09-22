@@ -16,6 +16,9 @@ inoremap <C-V> <Esc>"+gPi
 " Exit insert mode with jj
 inoremap jj <Esc>l
 
+" Exit visual mode with space
+vnoremap <Space> <Esc>
+
 " Auto-complete parentheses etc.
 function! ConditionalPairMap(open, close)
   let line = getline('.')
