@@ -13,6 +13,9 @@ vnoremap <A-Down> :m '>+1<CR>gv=gv
 " Cut&Paste
 inoremap <C-V> <Esc>"+gPi
 
+" Toggle paste mode
+set pastetoggle=<leader>p
+
 " Exit insert mode with jj
 inoremap jj <Esc>l
 
