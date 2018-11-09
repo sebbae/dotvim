@@ -50,3 +50,18 @@ function! <SID>SetProjectTypeNode()
 		\ 'file' : '\.tmp'
 		\ }
 endfunction
+
+command! ProjectTypeUI5 call <SID>ProjectTypeUI5()
+function! <SID>ProjectTypeUI5()
+	let wildignore_exec='set wildignore='
+	let wildignore_exec.=getcwd() . '/resources/*'
+	echom wildignore_exec
+	execute wildignore_exec
+
+	set path=.,src/**,,
+
+	let g:ctrlp_custom_ignore = {
+		\ 'dir'  : getcwd() . '\v[\/](resources)$',
+		\ 'file' : '\.tmp'
+		\ }
+endfunction
