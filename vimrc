@@ -19,6 +19,7 @@ if !empty("bundle/Vundle.vim")
 	Plugin 'tpope/vim-commentary'
 	Plugin 'rust-lang/rust.vim'
 	Plugin 'fatih/vim-go'
+	Plugin 'morhetz/gruvbox'
 	call vundle#end()
 else
 	echom "Missing Vundle plugin! Clone repository and run :PluginInstall"
@@ -56,6 +57,7 @@ if has("win32unix")
 	source ~/.vim/conemu.vim
 endif
 source ~/.vim/airlinerc.vim
+source ~/.vim/gruvbox.vim
 source ~/.vim/projecttypes.vim
 source ~/.vim/xsjs.vim
 if !empty(glob("~/.vim/local.vim"))
