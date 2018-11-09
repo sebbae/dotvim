@@ -2,6 +2,8 @@
 "nmap <S-Enter> O<Esc>j
 "nmap <CR> o<Esc>k
 
+set pastetoggle=<F2>
+
 " Moving lines/blocks up down
 inoremap <A-Down> <Esc>:m .+1<CR>==gi
 nnoremap <A-Up> :m .-2<CR>==
