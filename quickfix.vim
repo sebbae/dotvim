@@ -17,3 +17,4 @@ endfunction
 
 " <NUL> = Ctrl+Space
 nnoremap <silent> <NUL> :ToggleQuickfixWindow<CR>
+nnoremap <C-Space> :ToggleQuickfixWindow<CR>
