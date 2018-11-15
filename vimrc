@@ -19,6 +19,12 @@ if !empty("bundle/Vundle.vim")
 	Plugin 'tpope/vim-commentary'
 	Plugin 'rust-lang/rust.vim'
 	Plugin 'fatih/vim-go'
+	if has('nvim')
+		Plugin 'autozimu/LanguageClient-neovim'
+		Plugin 'junegunn/fzf'
+		Plugin 'junegunn/fzf.vim'
+		Plugin 'Shougo/deoplete.nvim'
+	endif
 	call vundle#end()
 else
 	echom "Missing Vundle plugin! Clone repository and run :PluginInstall"
@@ -35,6 +41,9 @@ function! SetPluginOptionsNow()
 	if exists(":SyntasticCheck")
 		source ~/.vim/rust.vim
 		source ~/.vim/javascript.vim
+	endif
+	if exists("")
+		source ~/.vim/deoplete.vim
 	endif
 endfunction
 
