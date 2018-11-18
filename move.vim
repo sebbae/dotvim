@@ -1,5 +1,5 @@
-" Set 7 lines to the cursor - when moving vertically using j/k
-set so=7
+" Set n lines to the cursor - when moving vertically using j/k
+set so=0
 
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
@@ -10,3 +10,5 @@ map 0 ^
 
 nnoremap ü {
 nnoremap ä }
+nnoremap Ü [[
+nnoremap Ä ]]
