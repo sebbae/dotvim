@@ -65,6 +65,9 @@ if has("win32unix")
 	source ~/.vim/cygwin.vim
 	source ~/.vim/conemu.vim
 endif
+if has("nvim")
+	source ~/.vim/nvim.vim
+endif
 source ~/.vim/airlinerc.vim
 source ~/.vim/gruvbox.vim
 source ~/.vim/projecttypes.vim
