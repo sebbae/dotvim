@@ -19,6 +19,7 @@ if !empty("bundle/Vundle.vim")
 	Plugin 'tpope/vim-commentary'
 	Plugin 'rust-lang/rust.vim'
 	Plugin 'fatih/vim-go'
+	Plugin 'morhetz/gruvbox'
 	if has('nvim')
 		Plugin 'autozimu/LanguageClient-neovim'
 		Plugin 'junegunn/fzf'
@@ -65,8 +66,10 @@ if has("win32unix")
 	source ~/.vim/conemu.vim
 endif
 source ~/.vim/airlinerc.vim
+source ~/.vim/gruvbox.vim
 source ~/.vim/projecttypes.vim
 source ~/.vim/xsjs.vim
+source ~/.vim/markdown.vim
 if !empty(glob("~/.vim/local.vim"))
 	source ~/.vim/local.vim
 endif
