@@ -4,8 +4,8 @@ set hidden
 " Navigate buffers
 nnoremap <C-Left> :bprev<CR>
 nnoremap <C-Right> :bnext<CR>
-nnoremap <Tab> :bprev<CR>
-nnoremap <S-Tab> :bnext<CR>
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprev<CR>
 
 " Close the current buffer
 map <leader>bd :Bclose<CR>
