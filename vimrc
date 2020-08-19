@@ -76,4 +76,6 @@ source ~/.vim/markdown.vim
 if !empty(glob("~/.vim/local.vim"))
 	source ~/.vim/local.vim
 endif
-
+if !empty(glob("./local.vim"))
+	source ./local.vim
+endif
