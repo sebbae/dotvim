@@ -73,6 +73,7 @@ source ~/.vim/gruvbox.vim
 source ~/.vim/projecttypes.vim
 source ~/.vim/xsjs.vim
 source ~/.vim/markdown.vim
+source ~/.vim/json.vim
 if !empty(glob("~/.vim/local.vim"))
 	source ~/.vim/local.vim
 endif
