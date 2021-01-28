@@ -57,6 +57,7 @@ source ~/.vim/buffers.vim
 source ~/.vim/windows.vim
 source ~/.vim/edit.vim
 source ~/.vim/move.vim
+source ~/.vim/scratch.vim
 source ~/.vim/search.vim
 source ~/.vim/spell.vim
 source ~/.vim/diff.vim
