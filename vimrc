@@ -40,6 +40,7 @@ function! SetPluginOptionsNow()
 		source ~/.vim/nerdtreerc.vim
 	endif
 	if exists(":SyntasticCheck")
+		source ~/.vim/syntastic.vim
 		source ~/.vim/rust.vim
 		source ~/.vim/javascript.vim
 	endif
