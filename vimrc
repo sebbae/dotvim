@@ -40,6 +40,7 @@ function! SetPluginOptionsNow()
 		source ~/.vim/nerdtreerc.vim
 	endif
 	if exists(":SyntasticCheck")
+		source ~/.vim/syntastic.vim
 		source ~/.vim/rust.vim
 		source ~/.vim/javascript.vim
 	endif
@@ -57,6 +58,7 @@ source ~/.vim/buffers.vim
 source ~/.vim/windows.vim
 source ~/.vim/edit.vim
 source ~/.vim/move.vim
+source ~/.vim/scratch.vim
 source ~/.vim/search.vim
 source ~/.vim/spell.vim
 source ~/.vim/diff.vim
@@ -73,7 +75,10 @@ source ~/.vim/gruvbox.vim
 source ~/.vim/projecttypes.vim
 source ~/.vim/xsjs.vim
 source ~/.vim/markdown.vim
+source ~/.vim/json.vim
 if !empty(glob("~/.vim/local.vim"))
 	source ~/.vim/local.vim
 endif
-
+if !empty(glob("./local.vim"))
+	source ./local.vim
+endif

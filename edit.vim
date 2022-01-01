@@ -34,8 +34,8 @@ function! ConditionalPairMap(open, close)
     return a:open . a:close . repeat("\<left>", len(a:close))
   endif
 endf
-inoremap <expr> ( ConditionalPairMap('(', ')')
-inoremap <expr> { ConditionalPairMap('{', '}')
-inoremap <expr> [ ConditionalPairMap('[', ']')
-inoremap <expr> " ConditionalPairMap('"', '"')
-inoremap <expr> ' ConditionalPairMap("'", "'")
+" inoremap <expr> ( ConditionalPairMap('(', ')')
+" inoremap <expr> { ConditionalPairMap('{', '}')
+" inoremap <expr> [ ConditionalPairMap('[', ']')
+" inoremap <expr> " ConditionalPairMap('"', '"')
+" inoremap <expr> ' ConditionalPairMap("'", "'")
