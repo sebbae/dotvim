@@ -3,3 +3,8 @@ let g:syntastic_javascript_checkers = []
 " requires eslint executable to be available: `npm install -g eslint`
 " Note: Using glob() instead of syntastic#util#findFileInParent() to support wildcard search for different .eslint config file types
 autocmd FileType javascript let b:syntastic_checkers = glob('.eslintrc*', expand('%:p:h', 1)) !=# '' ? ['eslint'] : []
+
+command! FormatJS call <SID>SetFormatJS()
+function! <SID>SetFormatJS()
+	execute 'silent !eslint --fix --fix-type layout %&' | execute 'redraw!'
+endfunction
