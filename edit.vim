@@ -24,6 +24,29 @@ inoremap jj <Esc>l
 " Exit visual mode with space
 vnoremap <Space> <Esc>
 
+" Define wrap command
+command! -nargs=* Wrap set wrap linebreak nolist
+
+command! UseIndentWithSpaces2 call <SID>UseIndentWithSpaces2()
+function! <SID>UseIndentWithSpaces2()
+	set expandtab ts=2 sw=2 ai
+endfunction
+
+command! UseIndentWithSpaces4 call <SID>UseIndentWithSpaces4()
+function! <SID>UseIndentWithSpaces4()
+	set expandtab ts=4 sw=4 ai
+endfunction
+
+command! UseIndentWithTab2 call <SID>UseIndentWithTab2()
+function! <SID>UseIndentWithTab2()
+	set noexpandtab ts=2 sw=2 ai
+endfunction
+
+command! UseIndentWithTab4 call <SID>UseIndentWithTab4()
+function! <SID>UseIndentWithTab4()
+	set noexpandtab ts=4 sw=4 ai
+endfunction
+
 " Auto-complete parentheses etc.
 function! ConditionalPairMap(open, close)
   let line = getline('.')
